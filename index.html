@@ -333,14 +333,14 @@
           var fdata = JSON.stringify(tmp, null, '\t');
           console.log(fdata)
           $.ajax({
-          url: "https://35.183.243.247:8080/",
+          url: "http://35.183.243.247:8080/",
           type: "POST",          
           dataType: "json",
           contentType: "application/json",
           data: fdata,
           success: function(result){
           console.log(result)
-          //document.getElementById("demo").innerHTML = result;
+          document.getElementById("demo").innerHTML = result;
           }});
         }); 
   
