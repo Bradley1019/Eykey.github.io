@@ -326,14 +326,14 @@
           var tmp2 = "\""+document.getElementById('subCategory').value+"\"";
           var tmp3 = document.getElementById('duration').value;
           var tmp4 = document.getElementById('goal').value;  
-          //var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 1000 }';
-          var jdata = '{"category": ' + tmp1 + ', "main_category": ' + tmp2 + ', "duration": ' + tmp3 + ', "usd_goal_real": ' + tmp4 + ' }';
+          var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 1000 }';
+          //var jdata = '{"category": ' + tmp1 + ', "main_category": ' + tmp2 + ', "duration": ' + tmp3 + ', "usd_goal_real": ' + tmp4 + ' }';
           console.log(jdata)
           var tmp = JSON.parse(jdata);
           var fdata = JSON.stringify(tmp, null, '\t');
           console.log(fdata)
           $.ajax({
-          url: "https://35.183.243.247:8080/",
+          url: "https://35.183.243.247:3000/",
           type: "POST",          
           dataType: "json",
           contentType: "application/json",
