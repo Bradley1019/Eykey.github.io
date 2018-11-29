@@ -338,6 +338,9 @@
           dataType: "json",
           contentType: "application/json",
           data: fdata,
+          xhrFields: {
+            withCredentials: true
+          },
           success: function(result){
           console.log(result)
           document.getElementById("prediction").innerHTML = result;
