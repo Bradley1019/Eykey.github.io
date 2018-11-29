@@ -319,30 +319,25 @@
 
     
 
-        $("button").click(function(){
+       var goal = document.getElementById("goal");
+       var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 10000 }';
+       //var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": goal }';
+       var tmp = JSON.parse(jdata);
+       var fdata = JSON.stringify(tmp, null, '\t');
 
 
-          var tmp1 = "\""+document.getElementById('mainCategory').value+"\"";
-          var tmp2 = "\""+document.getElementById('subCategory').value+"\"";
-          var tmp3 = document.getElementById('duration').value;
-          var tmp4 = document.getElementById('goal').value;  
-          var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 1000 }';
-          //var jdata = '{"category": ' + tmp1 + ', "main_category": ' + tmp2 + ', "duration": ' + tmp3 + ', "usd_goal_real": ' + tmp4 + ' }';
-          console.log(jdata)
-          var tmp = JSON.parse(jdata);
-          var fdata = JSON.stringify(tmp, null, '\t');
-          console.log(fdata)
-          $.ajax({
-          url: "http://cors.io/?u=https://35.183.243.247:3000/",
-          type: "POST",          
-          dataType: "json",
-          contentType: "application/json",
-          data: fdata,
-          success: function(result){
-          console.log(result)
-          document.getElementById("prediction").innerHTML = result;
-          }});
-        }); 
+       $("button").click(function(){
+       $.ajax({
+       url: "http://35.183.243.247:3000/",
+       type: "POST",
+       dataType: "json",
+       contentType: "application/json",
+       data: fdata,
+       success: function(result){
+       console.log(result)
+       //     $("#div1").html(result);
+       }});
+       }); 
   
 
         </script>
