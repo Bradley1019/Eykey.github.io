@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="../static/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/form-validation.css">
+    </head>
+
+    <body class="bg-light">
+
+      <div class="container">
+        <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="../static/brand/Kickstarter.jpg" alt="" width="300" height="175">
+        <h2>Kick start your Kickstarter!</h2>
+        <p class="lead">Below is a form that you can fill and submit about your crowdfunding project. We will analyze your project and give you our prediction on whether you will reach your goal!</p>
+        </div>
+            
+
+        <h4 class="mb-3" id="prediction"></h4>    
+        <div class="text-center" >
+            <div class="container">
+                <h4 class="mb-3">Project Information</h4>
+                <form id="myForm" class="needs-validation" novalidate>
+                  
+             <div class="row">
+                <div class="col-5 mb-3">
+                    <label for="duration">Duration of fund raising (from launch to deadline)</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">days</span>
+                      </div>                   
+                      <input type="number" class="form-control" id="duration"  required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your funding duration is required.
+                      </div>                  
+                    </div>
+                  </div>
+
+
+                           
+     
+                <div class="col-5 mb-3">
+                  <label for="goal">Funding Goal</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>                   
+                    <input type="number" class="form-control" id="goal" placeholder="$$$" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your funding goal is required.
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="mainCategory">Main Category</label>
+                        <select class="custom-select d-block w-100" id="mainCategory" required>
+                        <option value="">Choose...</option>
+                        <option>Music</option>  
+                        <option>Film & Video</option>
+                        <option>Food</option>
+                        <option>Design</option> 
+                        <option>Publishing</option>
+                        <option>Crafts</option>
+                        <option>Games</option>
+                        <option>Comics</option>
+                        <option>Fashion</option>
+                        <option>Art</option>
+                        <option>Photography</option>
+                        <option>Technology</option>
+                        <option>Dance</option>
+                        <option>Journalism</option>                  
+                        </select>
+                        <div class="invalid-feedback">
+                        Please select a valid main category.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="subCategory">Sub Category</label>
+                        <select class="custom-select d-block w-100" id="subCategory" required>
+                        <option value="">Choose...</option>
+                        <option>Music</option>  
+                        <option>Film & Video</option>
+                        <option>Narrative Film</option>
+                        <option>Restaurants</option>
+                        <option>Food</option>
+                        <option>Drinks</option>
+                        <option>Design</option> 
+                        <option>Product Design</option>
+                        <option>Poetry</option>
+                        <option>Documentary</option>
+                        <option>Nonfiction</option>
+                        <option>Indie Rock</option>
+                        <option>Tabletop Games</option>
+                        <option>Comic Books</option>
+                        <option>Art Books</option>
+                        <option>Childrenswear</option>
+                        <option>Theater</option>
+                        <option>DIY</option>
+                        <option>Webseries</option>
+                        <option>Animation</option>
+                        <option>Food Trucks</option>
+                        <option>Public Art</option>
+                        <option>Illustration'</option>
+                        <option>Photography</option>
+                        <option>Pop</option>
+                        <option>People</option>
+                        <option>Family</option>
+                        <option>Fiction</option>
+                        <option>Accessories</option>
+                        <option>Rock</option>
+                        <option>Hardware</option>
+                        <option>Software</option>
+                        <option>Weaving</option>
+                        <option>Gadgets</option>
+                        <option>Web</option>
+                        <option>Jazz</option>
+                        <option>Ready-to-wear</option>
+                        <option>Festivals</option>
+                        <option>Video Games</option>
+                        <option>Anthologies</option>
+                        <option>Shorts</option>
+                        <option>Publishing</option>
+                        <option>Crafts</option>
+                        <option>Games</option>
+                        <option>Comics</option>
+                        <option>Fashion</option>
+                        <option>Art</option>
+                        <option>Photography</option>
+                        <option>Technology</option>
+                        <option>Dance</option>
+                        <option>Journalism</option>
+                        <option>Electronic Music</option>
+                        <option>Radio & Podcasts</option>
+                        <option>Apps</option>
+                        <option>Cookbooks</option>
+                        <option>Apparel</option>
+                        <option>Metal</option>
+                        <option>Comedy</option>
+                        <option>Hip-Hop</option>
+                        <option>Periodicals</option>
+                        <option>Dance</option>
+                        <option>Technology</option>
+                        <option>Painting</option>
+                        <option>World Music</option>
+                        <option>Photobooks</option>
+                        <option>Drama</option>
+                        <option>Architecture</option>
+                        <option>Young Adult</option>
+                        <option>Latin</option>
+                        <option>Mobile Games</option>
+                        <option>Fine Art</option>
+                        <option>Flight</option>
+                        <option>Action</option>
+                        <option>Playing Cards</option>
+                        <option>Makerspaces</option>
+                        <option>Punk</option>
+                        <option>Thrillers</option>
+                        <option>Children's Books</option>
+                        <option>Audio</option>
+                        <option>Performance Art</option>
+                        <option>Ceramics</option>
+                        <option>Vegan</option>
+                        <option>Fabrication Tools</option>
+                        <option>Graphic Novels</option>
+                        <option>Performances</option>
+                        <option>Sculpture</option>
+                        <option>Sound</option>
+                        <option>Stationery</option>
+                        <option>Print</option>
+                        <option>Farmer's Markets</option>
+                        <option>Events</option>
+                        <option>Classical Music</option>
+                        <option>Graphic Design</option>
+                        <option>Spaces</option>
+                        <option>Country & Folk</option>
+                        <option>Wearables</option>
+                        <option>Mixed Media</option>
+                        <option>Journalism'</option>
+                        <option>Movie Theaters</option>
+                        <option>Animals</option>
+                        <option>Digital Art</option>
+                        <option>Horror</option>
+                        <option>Knitting</option>
+                        <option>Small Batch</option>
+                        <option>Installations</option>
+                        <option>Community Gardens</option>
+                        <option>DIY Electronics</option>
+                        <option>Embroidery</option>
+                        <option>Camera Equipment</option>
+                        <option>Jewelry</option>
+                        <option>Farms</option>
+                        <option>Conceptual Art</option>
+                        <option>Fantasy</option>
+                        <option>Webcomics</option>
+                        <option>Experimental</option>
+                        <option>Science Fiction</option>
+                        <option>Puzzles</option>
+                        <option>R&B</option>
+                        <option>Music Videos</option>
+                        <option>Calendars</option>
+                        <option>Video</option>
+                        <option>Plays</option>
+                        <option>Blues</option>
+                        <option>Bacon</option>
+                        <option>Faith</option>
+                        <option>Live Games</option>
+                        <option>Woodworking</option>
+                        <option>Places</option>
+                        <option>Footwear</option>
+                        <option>3D Printing</option>
+                        <option>Academic</option>
+                        <option>Zines</option>
+                        <option>Musical</option>
+                        <option>Workshops</option>
+                        <option>Photo</option>
+                        <option>Immersive</option>
+                        <option>Letterpress</option>
+                        <option>Gaming Hardware</option>
+                        <option>Candles</option>
+                        <option>Television</option>
+                        <option>Space Exploration</option>
+                        <option>Couture</option>
+                        <option>Nature</option>
+                        <option>Robots</option>
+                        <option>Typography</option>
+                        <option>Crochet</option>
+                        <option>Translations</option>
+                        <option>Textiles</option>
+                        <option>Pottery</option>
+                        <option>Interactive Design</option>
+                        <option>Video Art</option>
+                        <option>Quilts</option>
+                        <option>Glass</option>
+                        <option>Pet Fashion</option>
+                        <option>Printing</option>
+                        <option>Romance</option>
+                        <option>Civic Design</option>
+                        <option>Kids</option>
+                        <option>Literary Journals</option>
+                        <option>Taxidermy</option>
+                        <option>Literary Spaces</option>
+                        <option>Chiptune</option>
+                        <option>Residencies</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                        Please provide a valid sub category.
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Country</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>Canada</option>                    
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="province">Province</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>Alberta</option>
+                      <option>Quebec</option>
+                      <option>Ontario</option>
+                      <option>New-Brunswick</option>
+                      <option>Prince-Edward Island</option>
+                      <option>Manitoba</option>
+                      <option>British Columbia</option>
+                      <option>Saskatchewan</option>
+                      <option>Nova Scotia</option>
+                      <option>Newfoundland and Labrador</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                </div>
+
+    
+             
+                <hr class="mb-4">
+                <button  class="btn btn-primary btn-lg btn-block" type="submit">Rate my campaign</button>
+              </form>
+            </div>
+            </div>
+          </div>
+    
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2017-2018 Avocado Company</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+          </footer>
+        
+
+ 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+        const Url = "http://35.183.135.29:3000/";
+
+
+        //var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 10000 }';
+
+    
+
+        $("button").click(function(){
+
+
+          var tmp1 = "\""+document.getElementById('mainCategory').value+"\"";
+          var tmp2 = "\""+document.getElementById('subCategory').value+"\"";
+          var tmp3 = document.getElementById('duration').value;
+          var tmp4 = document.getElementById('goal').value;  
+          //var jdata = '{"category": "Film & Video", "main_category": "Film & Video", "duration": 150, "usd_goal_real": 1000 }';
+          var jdata = '{"category": ' + tmp1 + ', "main_category": ' + tmp2 + ', "duration": ' + tmp3 + ', "usd_goal_real": ' + tmp4 + ' }';
+          console.log(jdata)
+          var tmp = JSON.parse(jdata);
+          var fdata = JSON.stringify(tmp, null, '\t');
+          console.log(fdata)
+          $.ajax({
+          url: "http://35.183.243.247:3000/", 
+          type: "POST",          
+          dataType: "json",
+          contentType: "application/json",
+          data: fdata,
+          success: function(result){
+          console.log(result)
+          document.getElementById("demo").innerHTML = result;
+          }});
+        }); 
+  
+
+        </script>
+    </body>
